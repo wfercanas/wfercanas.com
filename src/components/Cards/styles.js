@@ -1,27 +1,27 @@
 import styled from "styled-components";
 
-const StyledArticle = styled.article``;
+const StyledHero = styled.article``;
 
-const StyledTitle = styled.h1`
+const StyledHeroTitle = styled.h1`
   color: var(--n900);
   font-size: var(--fs-h900);
   line-height: var(--lh-h900);
   margin: 0 0 16px;
 `;
 
-const StyledDate = styled.p`
+const StyledHeroDate = styled.p`
   font-size: var(--fs-h600);
   line-height: var(--lh-h600);
   color: var(--n400);
   margin: 0 0 32px;
 `;
 
-const StyledFigure = styled.figure`
+const StyledHeroFigure = styled.figure`
   margin: 0;
   max-width: 1000px;
 `;
 
-const StyledImage = styled.img`
+const StyledHeroImage = styled.img`
   max-width: 100%;
 `;
 
@@ -30,11 +30,40 @@ const StyledFigcaption = styled.figcaption`
   color: var(--n400);
 `;
 
+const StyledArticle = styled.article`
+  display: flex;
+  gap: 32px;
+  max-width: 1000px;
+`;
+
+const StyledArticleImage = styled.img`
+  max-width: 280px;
+`;
+
+const StyledArticleDescription = styled.div``;
+
+const StyledArticleTitle = styled.h2`
+  color: var(--n900);
+  margin: 0 0 16px;
+  font-size: var(--fs-h800);
+  line-height: var(--lh-h800);
+`;
+
+const StyledArticleDate = styled.p`
+  margin: 0;
+  color: var(--n400);
+`;
+
 export {
-  StyledArticle,
-  StyledTitle,
-  StyledDate,
-  StyledFigure,
-  StyledImage,
+  StyledHero,
+  StyledHeroTitle,
+  StyledHeroDate,
+  StyledHeroFigure,
+  StyledHeroImage,
   StyledFigcaption,
+  StyledArticle,
+  StyledArticleImage,
+  StyledArticleDescription,
+  StyledArticleTitle,
+  StyledArticleDate,
 };

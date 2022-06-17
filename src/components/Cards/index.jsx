@@ -1,25 +1,42 @@
 import React from "react";
 
 import {
-  StyledArticle,
-  StyledTitle,
-  StyledDate,
-  StyledFigure,
-  StyledImage,
+  StyledHero,
+  StyledHeroTitle,
+  StyledHeroDate,
+  StyledHeroFigure,
+  StyledHeroImage,
   StyledFigcaption,
+  StyledArticle,
+  StyledArticleImage,
+  StyledArticleDescription,
+  StyledArticleTitle,
+  StyledArticleDate,
 } from "./styles";
 
 const HeroCard = ({ title, date, image, alt, figcaption = "" }) => {
   return (
-    <StyledArticle>
-      <StyledTitle>{title}</StyledTitle>
-      <StyledDate>{date}</StyledDate>
-      <StyledFigure>
-        <StyledImage src={image} alt={alt} />
+    <StyledHero>
+      <StyledHeroTitle>{title}</StyledHeroTitle>
+      <StyledHeroDate>{date}</StyledHeroDate>
+      <StyledHeroFigure>
+        <StyledHeroImage src={image} alt={alt} />
         <StyledFigcaption>{figcaption}</StyledFigcaption>
-      </StyledFigure>
+      </StyledHeroFigure>
+    </StyledHero>
+  );
+};
+
+const ArticleCard = ({ title, date, image, alt }) => {
+  return (
+    <StyledArticle>
+      <StyledArticleImage src={image} alt={alt} />
+      <StyledArticleDescription>
+        <StyledArticleTitle>{title}</StyledArticleTitle>
+        <StyledArticleDate>{date}</StyledArticleDate>
+      </StyledArticleDescription>
     </StyledArticle>
   );
 };
 
-export { HeroCard };
+export { HeroCard, ArticleCard };
