@@ -67,7 +67,7 @@ const Footer = () => {
           </StyledSocialMediaList>
         </StyledSocialMediaContainer>
         <StyledNameContainer>
-          <StyledName>wfercanas.com</StyledName>
+          <StyledName>@wfercanas</StyledName>
         </StyledNameContainer>
       </StyledFooterContainer>
     </StyledFooter>
