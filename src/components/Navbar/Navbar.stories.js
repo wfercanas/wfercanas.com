@@ -1,7 +1,7 @@
 import { Navbar } from ".";
 
 export default {
-  title: "Navbar",
+  title: "Components / Navbar",
   component: Navbar,
 };
 

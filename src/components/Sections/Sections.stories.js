@@ -1,7 +1,7 @@
 import { Section } from ".";
 
 export default {
-  title: "Sections",
+  title: "Components / Sections",
   components: Section,
 };
 
