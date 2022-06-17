@@ -24,8 +24,8 @@ const HeroCard = ({
 }) => {
   return (
     <StyledHero>
-      <StyledHeroTitle>{title}</StyledHeroTitle>
-      <StyledHeroDate>{date}</StyledHeroDate>
+      <StyledHeroTitle date={date}>{title}</StyledHeroTitle>
+      {date && <StyledHeroDate>{date}</StyledHeroDate>}
       <StyledHeroFigure>
         <StyledHeroImage src={image} alt={alt} />
         <StyledFigcaption showCaption={showCaption}>

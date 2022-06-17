@@ -6,7 +6,7 @@ const StyledHeroTitle = styled.h1`
   color: var(--n900);
   font-size: var(--fs-h900);
   line-height: var(--lh-h900);
-  margin: 0 0 16px;
+  margin: ${({ date }) => (date ? "0 0 16px" : "0 0 64px")};
 `;
 
 const StyledHeroDate = styled.p`
