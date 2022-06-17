@@ -14,14 +14,23 @@ import {
   StyledArticleDate,
 } from "./styles";
 
-const HeroCard = ({ title, date, image, alt, figcaption = "" }) => {
+const HeroCard = ({
+  title,
+  date,
+  image,
+  alt,
+  figcaption = "",
+  showCaption = false,
+}) => {
   return (
     <StyledHero>
       <StyledHeroTitle>{title}</StyledHeroTitle>
       <StyledHeroDate>{date}</StyledHeroDate>
       <StyledHeroFigure>
         <StyledHeroImage src={image} alt={alt} />
-        <StyledFigcaption>{figcaption}</StyledFigcaption>
+        <StyledFigcaption showCaption={showCaption}>
+          {figcaption}
+        </StyledFigcaption>
       </StyledHeroFigure>
     </StyledHero>
   );

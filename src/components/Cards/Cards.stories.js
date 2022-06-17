@@ -17,6 +17,7 @@ Hero.args = {
   image: mediumImage,
   alt: "A group working together on a table and a whiteboard with sticky notes",
   figcaption: "Photo by Jason Goodman on Unsplash",
+  showCaption: true,
 };
 
 export const Article = (args) => {

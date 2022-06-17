@@ -26,6 +26,7 @@ const StyledHeroImage = styled.img`
 `;
 
 const StyledFigcaption = styled.figcaption`
+  display: ${({ showCaption }) => (showCaption ? "block" : "none")};
   text-align: center;
   color: var(--n400);
 `;
