@@ -9,7 +9,7 @@ const StyledNavbarContainer = styled.div`
 `;
 
 const StyledNameContainer = styled.div`
-  height: 72px;
+  height: 100px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -19,7 +19,12 @@ const StyledName = styled.p`
   margin: 0;
   width: 500px;
   color: var(--n900);
-  font-size: var(--fs-h900);
+  font-size: var(--fs-h600);
+  cursor: default;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const StyledListContainer = styled.div`
@@ -43,6 +48,7 @@ const StyledList = styled.ul`
 const StyledListItem = styled.li`
   margin: 0;
   cursor: default;
+  font-size: var(--fs-h600);
 
   &:hover {
     text-decoration: underline;
