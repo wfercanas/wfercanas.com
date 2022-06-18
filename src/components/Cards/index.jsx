@@ -1,5 +1,7 @@
 import React from "react";
 
+import { CDN_API } from "../../utils/api";
+
 import {
   StyledHero,
   StyledHeroTitle,
@@ -27,7 +29,7 @@ const HeroCard = ({
       <StyledHeroTitle date={date}>{title}</StyledHeroTitle>
       {date && <StyledHeroDate>{date}</StyledHeroDate>}
       <StyledHeroFigure>
-        <StyledHeroImage src={image} alt={alt} />
+        <StyledHeroImage src={`${CDN_API}/w_1000${image}`} alt={alt} />
         <StyledFigcaption showCaption={showCaption}>
           {figcaption}
         </StyledFigcaption>
@@ -39,7 +41,7 @@ const HeroCard = ({
 const ArticleCard = ({ title, date, image, alt }) => {
   return (
     <StyledArticle>
-      <StyledArticleImage src={image} alt={alt} />
+      <StyledArticleImage src={`${CDN_API}/w_1000${image}`} alt={alt} />
       <StyledArticleDescription>
         <StyledArticleTitle>{title}</StyledArticleTitle>
         <StyledArticleDate>{date}</StyledArticleDate>
