@@ -10,4 +10,9 @@ const StyledArticles = styled.div`
   gap: 24px;
 `;
 
-export { StyledHero, StyledArticles };
+const StyledAnchor = styled.div`
+  margin-top: 72px;
+  text-align: right;
+`;
+
+export { StyledHero, StyledArticles, StyledAnchor };
