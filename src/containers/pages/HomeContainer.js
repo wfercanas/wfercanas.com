@@ -21,7 +21,7 @@ const HomeContainer = () => {
   }, []);
 
   if (articles.length) {
-    return <HomePage heroArticle={articles[0].attributes} />;
+    return <HomePage articles={articles} />;
   }
 
   return <HomePage />;
