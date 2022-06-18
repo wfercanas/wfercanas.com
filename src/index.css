@@ -25,3 +25,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--n10);
 }
+
+textarea {
+  font-family: "Lato", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
