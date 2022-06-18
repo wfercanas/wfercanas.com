@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const StyledContactInput = styled.input`
   padding: 8px 16px;
-  min-width: 400px;
   font-size: var(--fs-h700);
   border: none;
   border-bottom: 2px solid var(--n10);
