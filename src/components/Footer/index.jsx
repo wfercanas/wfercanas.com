@@ -12,11 +12,11 @@ import {
   StyledName,
 } from "./styles";
 
-import twitter from "../../../assets/icons/twitter.png";
-import medium from "../../../assets/icons/medium.png";
-import instagram from "../../../assets/icons/instagram.png";
-import twitch from "../../../assets/icons/twitch.png";
-import linkedin from "../../../assets/icons/linkedin.png";
+import twitter from "../../assets/icons/twitter.png";
+import medium from "../../assets/icons/medium.png";
+import instagram from "../../assets/icons/instagram.png";
+import twitch from "../../assets/icons/twitch.png";
+import linkedin from "../../assets/icons/linkedin.png";
 
 const Footer = () => {
   return (
