@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledSection = styled.section`
   max-width: 1000px;
-  margin: 0 auto 100px;
+  margin: 100px auto 0;
   padding-bottom: 80px;
   border-bottom: ${({ divider }) => (divider ? "2px solid var(--n300)" : "0")};
 `;
