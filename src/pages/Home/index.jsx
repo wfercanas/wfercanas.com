@@ -3,8 +3,10 @@ import React from "react";
 import { Navbar } from "../../components/Navbar";
 import { Section } from "../../components/Sections";
 import { ArticleCard, HeroCard } from "../../components/Cards";
+import { MoreAnchor } from "../../components/Anchors";
 
-import { StyledHero, StyledArticles } from "./styles";
+import { StyledHero, StyledArticles, StyledAnchor } from "./styles";
+import { Footer } from "../../components/Footer";
 
 const HomePage = ({ articles }) => {
   return (
@@ -34,7 +36,16 @@ const HomePage = ({ articles }) => {
                 )
             )}
         </StyledArticles>
+        <StyledAnchor>
+          <MoreAnchor label="More articles" />
+        </StyledAnchor>
       </Section>
+      <Section label="Latest project">
+        <StyledAnchor>
+          <MoreAnchor label="More projects" />
+        </StyledAnchor>
+      </Section>
+      <Footer />
     </>
   );
 };
