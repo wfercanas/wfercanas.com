@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 const StyledContactInput = styled.input`
   padding: 8px 16px;
-  font-size: var(--fs-h700);
+  width: 100%;
+  box-sizing: border-box;
+  font-size: var(--fs-h600);
   border: none;
   border-bottom: 2px solid var(--n10);
   color: var(--n10);
@@ -11,7 +13,6 @@ const StyledContactInput = styled.input`
 
   &::placeholder {
     color: var(--n10);
-    font-weight: 300;
     opacity: 1;
   }
 `;
