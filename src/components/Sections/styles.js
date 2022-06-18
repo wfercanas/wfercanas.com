@@ -9,8 +9,8 @@ const StyledSection = styled.section`
 
 const StyledSectionTitle = styled.p`
   color: var(--n300);
-  font-size: var(--fs-h800);
-  line-height: var(--lh-h800);
+  font-size: var(--fs-h700);
+  line-height: var(--lh-h700);
 `;
 
 export { StyledSection, StyledSectionTitle };
