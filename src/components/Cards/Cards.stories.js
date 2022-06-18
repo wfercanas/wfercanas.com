@@ -1,6 +1,6 @@
 import { ArticleCard, HeroCard } from ".";
-import mediumImage from "../../../assets/images/sticky-notes-medium.jpg";
-import smallImage from "../../../assets/images/sticky-notes-small.jpg";
+import mediumImage from "../../assets/images/sticky-notes-medium.jpg";
+import smallImage from "../../assets/images/sticky-notes-small.jpg";
 
 export default {
   title: "Components / Cards",
