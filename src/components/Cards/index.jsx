@@ -41,7 +41,7 @@ const HeroCard = ({
 const ArticleCard = ({ title, date, image, alt }) => {
   return (
     <StyledArticle>
-      <StyledArticleImage src={`${CDN_API}/w_1000${image}`} alt={alt} />
+      <StyledArticleImage src={`${CDN_API}/w_500${image}`} alt={alt} />
       <StyledArticleDescription>
         <StyledArticleTitle>{title}</StyledArticleTitle>
         <StyledArticleDate>{date}</StyledArticleDate>
