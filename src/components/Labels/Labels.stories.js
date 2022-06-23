@@ -1,14 +1,14 @@
-import { Category } from ".";
+import { CategoryLabel } from ".";
 
 export default {
   title: "Components / Labels",
-  components: Category,
+  components: CategoryLabel,
 };
 
-export const Primary = (args) => {
-  return <Category {...args} />;
+export const Category = (args) => {
+  return <CategoryLabel {...args} />;
 };
 
-Primary.args = {
+Category.args = {
   label: "Product Manager",
 };

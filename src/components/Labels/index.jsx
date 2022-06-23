@@ -2,7 +2,7 @@ import React from "react";
 
 import { StyledCategory, StyledCategoryLabel } from "./styles";
 
-const Category = ({ label }) => {
+const CategoryLabel = ({ label }) => {
   return (
     <StyledCategory>
       <StyledCategoryLabel>{label}</StyledCategoryLabel>
@@ -10,4 +10,4 @@ const Category = ({ label }) => {
   );
 };
 
-export { Category };
+export { CategoryLabel };
