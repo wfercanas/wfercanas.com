@@ -55,6 +55,16 @@ const StyledArticleDate = styled.p`
   color: var(--n400);
 `;
 
+const StyledCategoriesList = styled.ul`
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+`;
+
+const StyledCategoriesListItem = styled.li``;
+
 export {
   StyledHero,
   StyledHeroTitle,
@@ -67,4 +77,6 @@ export {
   StyledArticleDescription,
   StyledArticleTitle,
   StyledArticleDate,
+  StyledCategoriesList,
+  StyledCategoriesListItem,
 };

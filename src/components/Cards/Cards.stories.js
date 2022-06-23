@@ -27,4 +27,5 @@ Article.args = {
   date: "01/06/2022",
   image: "/v1655517912/wfercanas.com/sticky-notes_wpowei.jpg",
   alt: "Many cups of coffee on top of a table where people are working with papers",
+  categories: [{ id: 0, attributes: { name: "Product Manager" } }],
 };
