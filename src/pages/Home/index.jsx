@@ -14,16 +14,18 @@ const HomePage = ({ articles }) => {
       <Navbar />
       <Section label="Latest articles" divider={true}>
         <StyledHero>
-          {articles && (
+          {articles.length && (
             <HeroCard
               title={articles[0].attributes.title}
               date={articles[0].attributes.published}
-              image={articles[0].attributes.coverURL}
+              alt={articles[0].attributes.cover.alt}
+              image={articles[0].attributes.cover.url}
+              figcaption={articles[0].attributes.cover.figcaption}
             />
           )}
         </StyledHero>
         <StyledArticles>
-          {articles &&
+          {articles.length &&
             articles.map(
               (article, index) =>
                 index !== 0 && (
@@ -31,7 +33,9 @@ const HomePage = ({ articles }) => {
                     key={article.id}
                     title={article.attributes.title}
                     date={article.attributes.published}
-                    image={article.attributes.coverURL}
+                    alt={article.attributes.cover.alt}
+                    image={article.attributes.cover.url}
+                    categories={article.attributes.categories.data}
                   />
                 )
             )}
