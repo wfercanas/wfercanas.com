@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Navbar } from "../../components/Navbar";
 import { Section } from "../../components/Sections";
 import { ArticleCard, HeroCard } from "../../components/Cards";
 import { MoreAnchor } from "../../components/Anchors";
@@ -11,7 +10,6 @@ import { Footer } from "../../components/Footer";
 const HomePage = ({ articles }) => {
   return (
     <>
-      <Navbar />
       <Section label="Latest articles" divider={true}>
         <StyledHero>
           {articles.length && (
@@ -49,7 +47,6 @@ const HomePage = ({ articles }) => {
           <MoreAnchor label="More projects" />
         </StyledAnchor>
       </Section>
-      <Footer />
     </>
   );
 };
