@@ -9,7 +9,9 @@ const HomeContainer = () => {
   useEffect(() => {
     async function getLastArticles() {
       try {
-        const response = await fetch(`${HK_API}${HK_ARTICLES_ENDPOINT}`);
+        const response = await fetch(
+          `${HK_API}${HK_ARTICLES_ENDPOINT}?populate=*`
+        );
         const { data } = await response.json();
         setArticles(data);
       } catch (error) {
@@ -20,11 +22,7 @@ const HomeContainer = () => {
     getLastArticles();
   }, []);
 
-  if (articles.length) {
-    return <HomePage articles={articles} />;
-  }
-
-  return <HomePage />;
+  return <HomePage articles={articles} />;
 };
 
 export { HomeContainer };
