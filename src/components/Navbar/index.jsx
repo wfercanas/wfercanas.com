@@ -11,7 +11,7 @@ import {
   StyledLink,
 } from "./styles";
 
-const Navbar = () => {
+const Navbar = ({ setModal }) => {
   return (
     <StyledNavbar>
       <StyledNavbarContainer>
@@ -28,7 +28,9 @@ const Navbar = () => {
             <StyledListItem>
               <StyledLink to="/projects">projects</StyledLink>
             </StyledListItem>
-            <StyledListItem>contact</StyledListItem>
+            <StyledListItem onClick={() => setModal(true)}>
+              contact
+            </StyledListItem>
           </StyledList>
         </StyledListContainer>
       </StyledNavbarContainer>

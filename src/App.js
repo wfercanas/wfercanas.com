@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Navbar } from "./components/Navbar";
@@ -6,11 +6,15 @@ import { Footer } from "./components/Footer";
 import { HomeContainer } from "./containers/pages/HomeContainer";
 import { ArticlesPage } from "./pages/Articles";
 import { ProjectsPage } from "./pages/Projects";
+import { ContactModal } from "./components/Modals";
 
 function App() {
+  const [modal, setModal] = useState(false);
+
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar setModal={setModal} />
+      {modal && <ContactModal modal={modal} setModal={setModal} />}
       <Routes>
         <Route path="/" element={<HomeContainer />} />
         <Route path="/articles" element={<ArticlesPage />} />
