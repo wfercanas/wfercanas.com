@@ -8,6 +8,7 @@ import {
   StyledListContainer,
   StyledList,
   StyledListItem,
+  StyledLink,
 } from "./styles";
 
 const Navbar = () => {
@@ -15,12 +16,18 @@ const Navbar = () => {
     <StyledNavbar>
       <StyledNavbarContainer>
         <StyledNameContainer>
-          <StyledName>wfercanas</StyledName>
+          <StyledName>
+            <StyledLink to="/">wfercanas</StyledLink>
+          </StyledName>
         </StyledNameContainer>
         <StyledListContainer>
           <StyledList>
-            <StyledListItem>articles</StyledListItem>
-            <StyledListItem>projects</StyledListItem>
+            <StyledListItem>
+              <StyledLink to="/articles">articles</StyledLink>
+            </StyledListItem>
+            <StyledListItem>
+              <StyledLink to="/projects">projects</StyledLink>
+            </StyledListItem>
             <StyledListItem>contact</StyledListItem>
           </StyledList>
         </StyledListContainer>

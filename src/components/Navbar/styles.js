@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledNavbar = styled.nav``;
 
@@ -55,6 +56,11 @@ const StyledListItem = styled.li`
   }
 `;
 
+const StyledLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+`;
+
 export {
   StyledNavbar,
   StyledNavbarContainer,
@@ -63,4 +69,5 @@ export {
   StyledListContainer,
   StyledList,
   StyledListItem,
+  StyledLink,
 };
