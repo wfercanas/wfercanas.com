@@ -5,7 +5,6 @@ import { ArticleCard, HeroCard } from "../../components/Cards";
 import { MoreAnchor } from "../../components/Anchors";
 
 import { StyledHero, StyledArticles, StyledAnchor } from "./styles";
-import { Footer } from "../../components/Footer";
 
 const HomePage = ({ articles }) => {
   return (
