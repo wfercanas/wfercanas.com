@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CDN_API } from "../../utils/api";
+import { CDN_API } from "../../api/endpoints";
 import { CategoryLabel } from "../Labels";
 
 import {
