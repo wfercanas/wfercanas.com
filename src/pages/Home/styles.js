@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const StyledPage = styled.div`
+  min-height: calc(100vh - 200px);
+`;
+
 const StyledHero = styled.div`
   margin-bottom: 120px;
 `;
@@ -15,4 +19,4 @@ const StyledAnchor = styled.div`
   text-align: right;
 `;
 
-export { StyledHero, StyledArticles, StyledAnchor };
+export { StyledPage, StyledHero, StyledArticles, StyledAnchor };

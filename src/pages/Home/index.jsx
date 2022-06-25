@@ -4,11 +4,11 @@ import { Section } from "../../components/Sections";
 import { ArticleCard, HeroCard } from "../../components/Cards";
 import { MoreAnchor } from "../../components/Anchors";
 
-import { StyledHero, StyledArticles, StyledAnchor } from "./styles";
+import { StyledPage, StyledHero, StyledArticles, StyledAnchor } from "./styles";
 
 const HomePage = ({ articles }) => {
   return (
-    <>
+    <StyledPage>
       <Section label="Latest articles" divider={true}>
         <StyledHero>
           {articles.length > 0 && (
@@ -46,7 +46,7 @@ const HomePage = ({ articles }) => {
           <MoreAnchor label="More projects" />
         </StyledAnchor>
       </Section>
-    </>
+    </StyledPage>
   );
 };
 
