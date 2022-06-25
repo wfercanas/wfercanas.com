@@ -11,7 +11,7 @@ const HomePage = ({ articles }) => {
     <>
       <Section label="Latest articles" divider={true}>
         <StyledHero>
-          {articles.length && (
+          {articles.length > 0 && (
             <HeroCard
               title={articles[0].attributes.title}
               date={articles[0].attributes.published}
@@ -22,7 +22,7 @@ const HomePage = ({ articles }) => {
           )}
         </StyledHero>
         <StyledArticles>
-          {articles.length &&
+          {articles.length > 0 &&
             articles.map(
               (article, index) =>
                 index !== 0 && (
