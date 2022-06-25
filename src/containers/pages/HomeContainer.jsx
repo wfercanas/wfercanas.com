@@ -15,7 +15,6 @@ const HomeContainer = () => {
         );
         const { data } = await response.json();
         setArticles(data);
-        console.log(data);
       } catch (error) {
         console.error(error);
       }
