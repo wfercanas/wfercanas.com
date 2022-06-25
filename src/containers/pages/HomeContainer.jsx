@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { HomePage } from "../../pages/Home";
 
-import { HK_API, HK_ARTICLES_ENDPOINT } from "../../utils/api";
+import { HK_API, HK_ARTICLES_ENDPOINT } from "../../api/endpoints";
+import { latestArticlesQuery } from "../../api/queries/latestArticles";
 
 const HomeContainer = () => {
   const [articles, setArticles] = useState([]);
@@ -10,10 +11,11 @@ const HomeContainer = () => {
     async function getLastArticles() {
       try {
         const response = await fetch(
-          `${HK_API}${HK_ARTICLES_ENDPOINT}?populate=*`
+          `${HK_API}${HK_ARTICLES_ENDPOINT}?${latestArticlesQuery}`
         );
         const { data } = await response.json();
         setArticles(data);
+        console.log(data);
       } catch (error) {
         console.error(error);
       }
