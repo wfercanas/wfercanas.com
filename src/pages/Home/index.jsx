@@ -6,6 +6,7 @@ import { latestArticlesQuery } from "../../api/queries/latestArticles";
 
 const HomePage = () => {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getLastArticles() {
@@ -23,7 +24,13 @@ const HomePage = () => {
     getLastArticles();
   }, []);
 
-  return <HomePageUI articles={articles} />;
+  useEffect(() => {
+    if (articles.length > 0) {
+      setLoading(false);
+    }
+  }, [articles]);
+
+  return <HomePageUI articles={articles} loading={loading} />;
 };
 
 export { HomePage };

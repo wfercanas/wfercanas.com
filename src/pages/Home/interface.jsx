@@ -4,9 +4,28 @@ import { Section } from "../../components/Sections";
 import { ArticleCard, HeroCard } from "../../components/Cards";
 import { MoreAnchor } from "../../components/Anchors";
 
-import { StyledPage, StyledHero, StyledArticles, StyledAnchor } from "./styles";
+import {
+  StyledPage,
+  StyledHero,
+  StyledArticles,
+  StyledAnchor,
+  StyledSpinnerContainer,
+  StyledSpinner,
+} from "./styles";
 
-const HomePageUI = ({ articles }) => {
+import spinner from "../../assets/icons/spinner.svg";
+
+const HomePageUI = ({ articles, loading }) => {
+  if (loading) {
+    return (
+      <StyledPage>
+        <StyledSpinnerContainer>
+          <StyledSpinner src={spinner} alt="Spinner" />
+        </StyledSpinnerContainer>
+      </StyledPage>
+    );
+  }
+
   return (
     <StyledPage>
       <Section label="Latest articles" divider={true}>
