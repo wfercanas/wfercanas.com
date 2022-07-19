@@ -8,19 +8,19 @@ const HomePage = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function getLastArticles() {
-      try {
-        const response = await fetch(
-          `${HK_API}${HK_ARTICLES_ENDPOINT}?${latestArticlesQuery}`
-        );
-        const { data } = await response.json();
-        setArticles(data);
-      } catch (error) {
-        console.error(error);
-      }
+  async function getLastArticles() {
+    try {
+      const response = await fetch(
+        `${HK_API}${HK_ARTICLES_ENDPOINT}?${latestArticlesQuery}`
+      );
+      const { data } = await response.json();
+      setArticles(data);
+    } catch (error) {
+      console.error(error);
     }
+  }
 
+  useEffect(() => {
     getLastArticles();
   }, []);
 
