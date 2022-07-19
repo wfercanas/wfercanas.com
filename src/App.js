@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { HomeContainer } from "./containers/pages/HomeContainer";
+import { HomePage } from "./pages/Home";
 import { ArticlesPage } from "./pages/Articles";
 import { ProjectsPage } from "./pages/Projects";
 import { ContactModal } from "./components/Modals";
@@ -16,7 +16,7 @@ function App() {
       <Navbar setModal={setModal} />
       {modal && <ContactModal modal={modal} setModal={setModal} />}
       <Routes>
-        <Route path="/" element={<HomeContainer />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
