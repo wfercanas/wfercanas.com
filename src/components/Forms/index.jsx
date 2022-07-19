@@ -15,12 +15,36 @@ const ContactForm = () => {
     message: "",
   });
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch(EMAIL_API, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _template: "table",
+        }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const handleChange = (target, payload) => {
     setFormData({ ...formData, [payload]: target.value });
   };
 
   return (
-    <StyledContactForm>
+    <StyledContactForm onSubmit={handleSubmit}>
       <ContactInput
         id="name"
         type="text"
