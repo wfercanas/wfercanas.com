@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const StyledPage = styled.div`
   min-height: calc(100vh - 200px);
@@ -19,25 +19,11 @@ const StyledAnchor = styled.div`
   text-align: right;
 `;
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
 const StyledSpinnerContainer = styled.div`
   height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const StyledSpinner = styled.img`
-  animation: ${rotate} 2s linear infinite;
 `;
 
 export {
@@ -46,5 +32,4 @@ export {
   StyledArticles,
   StyledAnchor,
   StyledSpinnerContainer,
-  StyledSpinner,
 };

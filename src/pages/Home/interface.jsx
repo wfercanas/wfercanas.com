@@ -3,6 +3,7 @@ import React from "react";
 import { Section } from "../../components/Sections";
 import { ArticleCard, HeroCard } from "../../components/Cards";
 import { MoreAnchor } from "../../components/Anchors";
+import { Spinner } from "../../components/Spinners";
 
 import {
   StyledPage,
@@ -10,17 +11,14 @@ import {
   StyledArticles,
   StyledAnchor,
   StyledSpinnerContainer,
-  StyledSpinner,
 } from "./styles";
-
-import spinner from "../../assets/icons/spinner.svg";
 
 const HomePageUI = ({ articles, loading }) => {
   if (loading) {
     return (
       <StyledPage>
         <StyledSpinnerContainer>
-          <StyledSpinner src={spinner} alt="Spinner" />
+          <Spinner />
         </StyledSpinnerContainer>
       </StyledPage>
     );
