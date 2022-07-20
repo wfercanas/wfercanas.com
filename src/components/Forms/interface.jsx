@@ -6,7 +6,7 @@ import { ContactTextarea } from "../Textareas";
 
 import { StyledContactForm } from "./styles";
 
-const ContactFormUI = ({ handleSubmit, handleChange, formData }) => {
+const ContactFormUI = ({ handleSubmit, handleChange, formData, status }) => {
   return (
     <StyledContactForm onSubmit={handleSubmit}>
       <ContactInput
@@ -33,7 +33,7 @@ const ContactFormUI = ({ handleSubmit, handleChange, formData }) => {
         handleChange={handleChange}
         maxlength={200}
       />
-      <SubmitButton label="Send" />
+      <SubmitButton label="Send" status={status} />
     </StyledContactForm>
   );
 };
