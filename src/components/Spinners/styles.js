@@ -12,6 +12,7 @@ const rotate = keyframes`
 
 const StyledSpinner = styled.img`
   animation: ${rotate} 2s linear infinite;
+  width: ${({ size }) => `${size}px`};
 `;
 
 export { StyledSpinner };
