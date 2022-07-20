@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 :root {
+  --r500: #bf2600;
+
+  --t200: #00c7e6;
+
   --g200: #57d9a3;
 
   --n10: #fafbfc;
