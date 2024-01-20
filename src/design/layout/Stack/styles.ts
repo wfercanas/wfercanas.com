@@ -3,12 +3,12 @@ import { IStack } from ".";
 
 const StyledStack = styled.div<IStack>`
   display: flex;
-  flex-direction: "row";
-  flex-wrap: "nowrap";
-  justify-content: "flex-start";
-  align-items: "flex-start";
-  align-content: "flex-start";
-  gap: "0px";
+  flex-direction: ${({ direction }) => direction};
+  flex-wrap: ${({ wrap }) => wrap};
+  justify-content: ${({ justifyContent }) => justifyContent};
+  align-items: ${({ alignItems }) => alignItems};
+  align-content: ${({ alignContent }) => alignContent};
+  gap: ${({ gap }) => gap};
 `;
 
 export { StyledStack };
