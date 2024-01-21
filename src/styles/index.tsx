@@ -5,7 +5,7 @@ function GlobalStyle() {
     <Global
       styles={css`
         body {
-          font-family: "Noto Sans", "Arial";
+          font-family: "Noto Serif", "Arial";
           padding: 32px 80px;
         }
       `}
