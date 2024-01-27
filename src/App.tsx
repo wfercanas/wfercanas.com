@@ -1,17 +1,37 @@
-import { Header } from "./components/Header";
-import { ArticleCard } from "./components/Cards/ArticleCard";
+import {
+  createRoutesFromElements,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+
+import { getArticles } from "./loaders/getArticles";
+
+import { Home } from "./pages/Home";
+import { Error } from "./pages/Error";
+import { Article } from "./pages/Article";
 
 import { GlobalStyle } from "./styles";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route
+        path="/"
+        element={<Home />}
+        errorElement={<Error />}
+        loader={getArticles}
+      />
+      <Route path="article/:slug" element={<Article />} />
+    </>,
+  ),
+);
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <main>
-        <h1>Articles</h1>
-        <ArticleCard />
-      </main>
+      <RouterProvider router={router} />
     </>
   );
 }
