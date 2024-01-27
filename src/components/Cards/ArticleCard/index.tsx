@@ -1,21 +1,42 @@
-import {
-  StyledArticle,
-  StyledCover,
-  StyledMetadataContainer,
-  StyledTitle,
-  StyledDate,
-} from "./styles";
+import { Text } from "../../../design/data/Text";
+import { Stack } from "../../../design/layout/Stack";
 
-function ArticleCard() {
+import GrowthLogo from "../../../assets/icons/growth.png";
+
+import { StyledArticle, StyledCover, StyledLink } from "./styles";
+
+interface IArticleCard {
+  title: string;
+  category: string;
+  slug: string;
+  published_at: string;
+  id: string;
+}
+
+function ArticleCard(props: IArticleCard) {
+  const { title, category, slug, published_at } = props;
   return (
     <StyledArticle>
-      <StyledCover src="https://res.cloudinary.com/wfercanas/image/upload/w_250/v1655517911/wfercanas.com/teamwork_nhdgpa.jpg" />
-      <StyledMetadataContainer>
-        <StyledTitle>Human biases in software development</StyledTitle>
-        <StyledDate>Jul, 24, 2021</StyledDate>
-      </StyledMetadataContainer>
+      <StyledLink to={`/article/${slug}`}>
+        <Stack gap="16px">
+          <StyledCover src={categoryLogo(category)} />
+          <Stack direction="column">
+            <Text as="h2">{title}</Text>
+            <Text>{published_at}</Text>
+          </Stack>
+        </Stack>
+      </StyledLink>
     </StyledArticle>
   );
+}
+
+function categoryLogo(category: string) {
+  switch (category) {
+    case "growth":
+      return GrowthLogo;
+    default:
+      return GrowthLogo;
+  }
 }
 
 export { ArticleCard };

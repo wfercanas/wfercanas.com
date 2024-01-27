@@ -1,30 +1,23 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const StyledArticle = styled.article`
-  display: flex;
-  gap: 16px;
+  cursor: pointer;
+  padding: 8px;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const StyledCover = styled.img`
-  max-width: 250px;
+  max-width: 64px;
   height: fit-content;
 `;
 
-const StyledMetadataContainer = styled.div``;
-
-const StyledTitle = styled.p`
-  margin: 0;
-  font-weight: bold;
-`;
-
-const StyledDate = styled.p`
-  margin: 0;
-`;
-
-export {
-  StyledArticle,
-  StyledCover,
-  StyledMetadataContainer,
-  StyledTitle,
-  StyledDate,
-};
+export { StyledArticle, StyledLink, StyledCover };
