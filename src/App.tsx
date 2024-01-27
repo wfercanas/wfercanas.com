@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import { getArticles } from "./loaders/getArticles";
+import { getArticle } from "./loaders/getArticle";
 
 import { Home } from "./pages/Home";
 import { Error } from "./pages/Error";
@@ -22,7 +23,7 @@ const router = createBrowserRouter(
         errorElement={<Error />}
         loader={getArticles}
       />
-      <Route path="article/:slug" element={<Article />} />
+      <Route path="article/:slug" element={<Article />} loader={getArticle} />
     </>,
   ),
 );
