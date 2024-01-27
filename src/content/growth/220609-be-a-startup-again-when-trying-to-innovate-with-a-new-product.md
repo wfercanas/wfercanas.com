@@ -2,17 +2,20 @@ Every successful company has passed through the following stages: startup, growt
 
 Let’s see what these stages are about. Then, I will show you three reasons why it is important to walk again the same road whenever an established company wants to innovate with new products.
 
-**Startup**
+## Startup
+
 In this stage the objective is basically one: find a favorable market position — market-fit — . This means, define the product that the market is willing to buy and that the company is in conditions to produce profitably.
 
 It is necessary to experiment, learn and pivot fast so the product may find its right path.
 
-**Growth**
+## Growth
+
 If the product has find its market-fit, the pains of growing appear. To increase the scale of what the company has been doing up to this point is a tough task. There are many internal dynamics that have been popping-up from the immediate necessities and not all of them can scale to a greater productive level in a satisfactory way.
 
 Moreover, to grow also implies that you must start considering aspects of the business that were not a priority in the startup stage. Now, these new elements should grow and get integrated with the hectic pace of a business that barely survives while it grows.
 
-**Consolidation**
+## Consolidation
+
 Here the product reaches a meaningful level of maturity and the internal dynamics of the business start settling. Job specialization is more evident now. It is easy to identify who is in charge of each operation and where are the limits of each team.
 
 The job specialization in some places allow you to achieve deep knowledge in many complexities of the business. This is possible because the business can afford to invest time and resources in areas that are important but not urgent.
