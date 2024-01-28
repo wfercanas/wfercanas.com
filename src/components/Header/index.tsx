@@ -1,7 +1,11 @@
-import { StyledHeader } from "./styles";
+import { StyledHeader, StyledLink } from "./styles";
 
 function Header() {
-  return <StyledHeader>wfercanas.com</StyledHeader>;
+  return (
+    <StyledHeader>
+      <StyledLink to="/">wfercanas.com</StyledLink>
+    </StyledHeader>
+  );
 }
 
 export { Header };
