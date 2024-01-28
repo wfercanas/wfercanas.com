@@ -7,6 +7,8 @@ function GlobalStyle() {
         body {
           font-family: "Noto Serif", "Arial";
           padding: 32px 80px;
+          color: #333;
+          line-height: 1.8;
         }
       `}
     />
