@@ -1,14 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 
 import { ArticleCard } from "../../components/Cards/ArticleCard";
-import { Header } from "../../components/Header";
 import { IArticle } from "../../types/article";
 
 function Home() {
   const articles = useLoaderData() as IArticle[];
   return (
     <>
-      <Header />
+      <h1>Articles</h1>
       {articles.length > 0 ? (
         articles.map((article) => (
           <ArticleCard
