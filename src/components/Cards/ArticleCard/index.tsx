@@ -21,8 +21,14 @@ function ArticleCard(props: IArticleCard) {
         <Stack gap="16px">
           <StyledCover src={categoryLogo(category)} />
           <Stack direction="column">
-            <Text as="h2">{title}</Text>
-            <Text>{published_at}</Text>
+            <Text as="h3">{title}</Text>
+            <Text>
+              {new Date(published_at).toLocaleDateString("en-EN", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </Text>
           </Stack>
         </Stack>
       </StyledLink>
