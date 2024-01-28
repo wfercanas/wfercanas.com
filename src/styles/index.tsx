@@ -8,7 +8,12 @@ function GlobalStyle() {
           font-family: "Noto Serif", "Arial";
           padding: 32px 80px;
           color: #333;
-          line-height: 1.8;
+        }
+
+        @media screen and (max-width: 700px) {
+          body {
+            padding: 32px;
+          }
         }
       `}
     />

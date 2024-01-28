@@ -16,8 +16,16 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledCover = styled.img`
-  max-width: 64px;
+  max-width: 48px;
   height: fit-content;
+
+  @media screen and (max-width: 700px) {
+    max-width: 40px;
+  }
+
+  @media screen and (max-width: 500px) {
+    max-width: 32px;
+  }
 `;
 
 export { StyledArticle, StyledLink, StyledCover };
