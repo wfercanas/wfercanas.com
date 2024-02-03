@@ -17,13 +17,16 @@ const StyledLink = styled(Link)`
 
 const StyledCover = styled.img`
   width: 48px;
+  height: 48px;
 
   @media screen and (max-width: 700px) {
     width: 40px;
+    height: 40px;
   }
 
   @media screen and (max-width: 500px) {
     width: 32px;
+    height: 32px;
   }
 `;
 
