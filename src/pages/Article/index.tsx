@@ -1,7 +1,37 @@
-import Markdown from "markdown-to-jsx";
 import { useLoaderData, useParams } from "react-router-dom";
+import Markdown from "markdown-to-jsx";
+
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
 import { IArticle } from "../../types/article";
+
+import { Figcaption } from "../../design/data/Figcaption";
+import { Figure } from "../../design/data/Figure";
+
 import { StyledArticle } from "./styles";
+
+const options = {
+  overrides: {
+    figure: {
+      component: Figure,
+    },
+    figcaption: {
+      component: Figcaption,
+    },
+    code: {
+      component: SyntaxHighlighter,
+      props: {
+        language: "js",
+        style: nightOwl,
+        customStyle: {
+          padding: "32px",
+          borderRadius: "8px",
+        },
+      },
+    },
+  },
+};
 
 function Article() {
   const { slug } = useParams();
@@ -11,7 +41,7 @@ function Article() {
   return article ? (
     <StyledArticle>
       <Markdown>{`# ${article.title}`}</Markdown>
-      <Markdown>{article.content}</Markdown>
+      <Markdown options={options}>{article.content}</Markdown>
     </StyledArticle>
   ) : (
     <p>No article</p>
