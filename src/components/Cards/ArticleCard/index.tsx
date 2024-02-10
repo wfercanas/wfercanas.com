@@ -2,6 +2,10 @@ import { Text } from "../../../design/data/Text";
 import { Stack } from "../../../design/layout/Stack";
 
 import GrowthLogo from "../../../assets/icons/growth.png";
+import JavaScriptLogo from "../../../assets/icons/js.png";
+import TypeScriptLogo from "../../../assets/icons/ts.png";
+import FrontendLogo from "../../../assets/icons/frontend.png";
+import ReactLogo from "../../../assets/icons/react.png";
 
 import { StyledArticle, StyledCover, StyledLink } from "./styles";
 
@@ -40,6 +44,14 @@ function categoryLogo(category: string) {
   switch (category) {
     case "growth":
       return GrowthLogo;
+    case "frontend":
+      return FrontendLogo;
+    case "javascript":
+      return JavaScriptLogo;
+    case "typescript":
+      return TypeScriptLogo;
+    case "react":
+      return ReactLogo;
     default:
       return GrowthLogo;
   }

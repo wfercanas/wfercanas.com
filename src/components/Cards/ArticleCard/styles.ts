@@ -18,6 +18,7 @@ const StyledLink = styled(Link)`
 const StyledCover = styled.img`
   width: 48px;
   height: 48px;
+  object-fit: contain;
 
   @media screen and (max-width: 700px) {
     width: 40px;
