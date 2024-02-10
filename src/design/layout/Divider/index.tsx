@@ -5,7 +5,9 @@ function Divider() {
   return (
     <StyledContainer>
       <Stack justifyContent="space-around">
-        {Array(3).fill(<StyledDot />)}
+        <StyledDot />
+        <StyledDot />
+        <StyledDot />
       </Stack>
     </StyledContainer>
   );
