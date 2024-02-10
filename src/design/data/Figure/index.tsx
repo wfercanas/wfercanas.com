@@ -10,7 +10,7 @@ function Figure(props: IFigure) {
   const { children } = props;
   return (
     <StyledFigure>
-      <Stack direction="column" alignItems="center">
+      <Stack direction="column" alignItems="center" gap="8px">
         {children}
       </Stack>
     </StyledFigure>
