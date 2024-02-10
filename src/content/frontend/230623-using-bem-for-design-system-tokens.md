@@ -21,11 +21,11 @@ The domain part of the token allows you to access the pilars of the design-syste
 
 The other parts of the tokens are related with a BEM structure (Block-Element-Modifier). This is originally an approach to work with CSS classes. With BEM we have a consistent way of styling our components, particularly in projects that start growing in size. [See more](https://getbem.com/introduction/).
 
-A **block** should be meaningful on its own. Applied to CSS classes it could be a `header` or a `nav`.
+A **block** should be meaningful on its own. Applied to CSS classes it could be a _header_ or a _nav_.
 
-An **element** should be tied to its block, because it is meaningless on its own. Continuing with the previous examples, the element could be a logo or a link but tied to their blocks like `header logo` or `nav link`.
+An **element** should be tied to its block, because it is meaningless on its own. Continuing with the previous examples, the element could be a logo or a link but tied to their blocks like _header logo_ or _nav link_.
 
-Finally, we have the **modifier**. Their role is to change an element, so that it can be displayed in different ways depending on its context. You can think of them like CSS pseudo-classes. So, in the example of the `nav link`, we can have it in its regular, hovered or selected states: `nav link regular`, `nav link hover` or `nav link select`.
+Finally, we have the **modifier**. Their role is to change an element, so that it can be displayed in different ways depending on its context. You can think of them like CSS pseudo-classes. So, in the example of the _nav link_, we can have it in its regular, hovered or selected states: _nav link regular_, _nav link hover_ or _nav link select_.
 
 ## Color Tokens
 
@@ -83,7 +83,7 @@ If you find yourself in this situation or if the aesthetics depends on some othe
 
 ## Components
 
-In order to illustrate how do the tokens impact a component, lets see two `<Flag />` components where the color tokens are used:
+In order to illustrate how do the tokens impact a component, lets see two _Flag_ components where the color tokens are used:
 
 <figure>
 <img src="https://res.cloudinary.com/wfercanas/image/upload/v1706985280/wfercanas.com/articles/230623/components.webp">
