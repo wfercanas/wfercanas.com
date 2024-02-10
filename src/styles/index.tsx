@@ -6,6 +6,7 @@ function GlobalStyle() {
       styles={css`
         body {
           font-family: "Noto Serif", "Arial";
+          line-height: 1.6;
           padding: 32px 80px;
           color: #333;
         }
