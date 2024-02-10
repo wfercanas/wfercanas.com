@@ -23,7 +23,7 @@ So, we could have these tokens for acme:
 - acme.typography.label.large.weight = 500
 - acme.typography.label.large.font = “Open Sans, sans-serif”
 
-In practice, if we need to add a label in its large variant inside a card and we have a _<Text />_ component to make it work, it would look like this:
+In practice, if we need to add a label in its large variant inside a card and we have a Text component to make it work, it would look like this:
 
 ```js
 function Card() {
@@ -56,7 +56,7 @@ Given the fact that we don’t want to hardcode the client into the styles defin
 
 ## Theme Provider
 
-Continuing with the use of styled-components, we have inside the library the _<ThemeProvider />_ [component](https://styled-components.com/docs/advanced#theming).
+Continuing with the use of styled-components, we have inside the library the ThemeProvider [component](https://styled-components.com/docs/advanced#theming).
 
 With this component, we can define a theme, pass it as props to the provider and guarantee that each styled-component we create will have access to that theme.
 
@@ -111,9 +111,9 @@ Let’s see how.
 
 ## Google Fonts
 
-If we access [fonts.google.com](fonts.google.com), we have access to a wide variety of fonts that we can use in our projects. The most common way to use these resources is to copy the _<link>_ elements for the set of fonts we want to use and paste them inside the _<head>_ element of our HTML document.
+If we access [fonts.google.com](fonts.google.com), we have access to a wide variety of fonts that we can use in our projects. The most common way to use these resources is to copy the _link_ elements for the set of fonts we want to use and paste them inside the _head_ element of our HTML document.
 
-Through this _<link>_ element, which at the end is of _rel=”stylesheet”_, we are defining a set of CSS rules related to font faces (@font-face). If you want, you can click on this example and your browser will show you these rules: https://fonts.googleapis.com/css2?family=Open+Sans&display=swap
+Through this _link_ element, which at the end is of _rel=”stylesheet”_, we are defining a set of CSS rules related to font faces (@font-face). If you want, you can click on this example and your browser will show you these rules: https://fonts.googleapis.com/css2?family=Open+Sans&display=swap
 
 If you look carefully, there is a rule for the different ranges of unicode characters. For simplification, we can use just the rules for latin ranges.
 
