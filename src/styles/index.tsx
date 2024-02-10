@@ -16,6 +16,12 @@ function GlobalStyle() {
             padding: 32px;
           }
         }
+
+        @media screen and (max-width: 500px) {
+          body {
+            padding: 16px;
+          }
+        }
       `}
     />
   );
