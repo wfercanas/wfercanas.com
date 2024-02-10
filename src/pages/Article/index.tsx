@@ -10,6 +10,7 @@ import { Figcaption } from "../../design/data/Figcaption";
 import { Figure } from "../../design/data/Figure";
 
 import { StyledArticle } from "./styles";
+import { Divider } from "../../design/layout/Divider";
 
 const options = {
   overrides: {
@@ -29,6 +30,9 @@ const options = {
           borderRadius: "8px",
         },
       },
+    },
+    hr: {
+      component: Divider,
     },
   },
 };
