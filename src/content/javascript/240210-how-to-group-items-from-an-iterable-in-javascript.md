@@ -1,6 +1,6 @@
 We often have an iterable data structure that contains a whole bunch of items that we would like to accomodate in different groups depending on some operation or property.
 
-This article presents how we would do it manually, test our implementation and compare it with a new addition to JavaScript: _Object.groupBy_. This static method of the Object class will simplify how we can achieve the same results.
+This article presents how we would do it manually, test our implementation and compare it with a new addition to JavaScript: _Object.groupBy()_. This static method of the Object class will simplify how we can achieve the same results.
 
 ## Group numbers
 
@@ -14,7 +14,7 @@ const numbers = [1, 2, 3, 4, 5]; // -> {odd: [1, 3, 5], even: [2, 4]}
 
 ### Even vs Odd
 
-Let's start by defining how we can evaluate if a given number is even or odd. With this function, we will be able to test any number and decide in which group it should go.
+Let's start by defining how we can evaluate if a given number is even or odd. With this function, we will be able to test any number and decide in which group it should be inserted.
 
 ```js
 function evenOrOdd(number) {
@@ -56,7 +56,7 @@ function groupBy(numbers) {
 
 ### Test function
 
-We can use the function directly and log the results to test if everything works as intended. But let's create a test function to organize the execution of the function and improve the readibility of the outcomes.
+We can use the function directly and log the results to see if everything works as intended. But let's create a test function to organize the execution of the function and improve the readibility of the outcomes.
 
 Our test function has access to groupBy because they are defined in the same scope.
 
@@ -129,9 +129,9 @@ Our implementation seems to work just fine, but only for the scenario in which w
 
 ## Group letters
 
-Let's imagine that now we don't need to group a list of numbers in terms of odd or even numbers, but that we must group a list of letters in two groups: vowels and consonants. Sadly, our implementation as it is right now is far from working in this new scenario.
+Let's imagine now that we don't need to group a list of numbers in terms of odd or even numbers, but that we must group a list of letters in two groups: vowels and consonants. Sadly, our implementation as it is right now is far from working in this new scenario.
 
-So, now we have to check how to extend our implementation so we can create a more useful **groupBy** function. If we analyze our code, we can see that we're currently expecting a list of numbers as a parameter and assume that we can iterate over that list to check if each number is odd or not.
+So, we have to check how to extend our implementation so we can create a more useful **groupBy** function. If we analyze our code, we can see that we're currently expecting a list of numbers as a parameter and assume that we can iterate over that list to check if each number is odd or not.
 
 Let's see how we can make some adjustments to create a more general **groupBy** function.
 
@@ -202,7 +202,7 @@ function vowelOrConsonant(letter) {
 
 ### Test cases for letters
 
-Good. We can now write some test cases and execute them to check if our refactored implementation can handle this new situation:
+Good. We can now write some test cases and run them to check if our refactored implementation can handle this new situation:
 
 ```js
 const hello = ["h", "e", "l", "l", "o"];
@@ -242,7 +242,7 @@ console.table([
 └─────────┴──────────┴───────────────────────────────────────────────────────────────────────┘
 ```
 
-Everything seems to be ok, but the result of test 3 is kind of weird. Our callback returns undefined when a is checking a character that is not a letter, and we're forming a group with a key named "undefined".
+Everything seems to be ok, but the result of test 3 is kind of weird. Our callback returns undefined when is checking a character that is not a letter, and we're forming a group with a key named "undefined".
 
 We could try to fix this by throwing an error in our callback or by refactoring our groupBy function to prevent pushing values when is not appropiate, but let's leave it as is so we can compare this with the results of the new _Object.groupBy_ static method.
 
@@ -250,11 +250,11 @@ Apart from this, our refactored function seems to be working great! it even work
 
 ## Object.groupBy
 
-Alright. Now we have our tailor made groupBy, which seems to work just fine when we can assure that we're passing an iterable and kind of ok when passing callbacks. This because we saw in the previous exercise that if we pass a callback that cannot group an item, we end up with a result that is not what we expected.
+Alright. Now we have our tailor made groupBy, which seems to work just fine when we can assure that we're passing an iterable and kind of ok when passing callbacks. This because we saw in the previous exercise that if we pass a callback that cannot group an item, we end up with a result that is not what we expected (a group with "undefined" as its name).
 
 Let's see how we can implement the same two exercises using now the static method _Object.groupBy()_.
 
-**Note**: this feature is new, and is expected to be published by TC39 in 2024. So check if your environment supports it. **This exercises were executed in Node v21.6.1 where the method is supported.**
+**Note**: this feature is new, and is expected to be published by TC39 in 2024. So check if your environment supports it. **This exercises were executed in Node v21.6.1**
 
 ### Numbers
 
@@ -318,4 +318,4 @@ Nice. This execution can also serve us to learn more about the method:
 2. This is just a model of what the method is. Nonetheless, always try to use the standard version of the method. You can find the proposal for this addition to Javascript in [here](https://github.com/tc39/proposal-array-grouping). Also check MDN to [see more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy).
 3. Check if your environment supports the method before trying to execute the code. The resource in MDN can help you check.
 4. We explored just one part of the proposal. There is also the _Map.groupBy()_ static method. I invite you to see how it works and think about which of the assumptions made about the results of the method groupBy() should be reconsidered.
-5. I talked many times about iterables. You can check more about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/is_not_iterable).
+5. I talked many times about iterables. You can check more about that concept [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/is_not_iterable).
