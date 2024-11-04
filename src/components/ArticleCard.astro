@@ -37,7 +37,7 @@ const { url, title, description, published_at } = Astro.props
   <a href={url}>
     <div>
       <h2 class="title">{title}</h2>
-      <p class="published_at">{new Date(published_at).toLocaleDateString()}</p>
+      <p class="published_at">{new Date(published_at).toDateString()}</p>
     </div>
     <p class="description">{description}</p>
   </a>
