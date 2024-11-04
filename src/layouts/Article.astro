@@ -1,0 +1,23 @@
+---
+import Body from "./Body.astro";
+const { frontmatter } = Astro.props;
+---
+<style>
+  .meta {
+    margin-bottom: 80px;
+  }
+
+  .meta p {
+    margin: 2px 0;
+    color: var(--gray);
+  }
+</style>
+
+
+<Body title="article" headline={frontmatter.title}>
+  <div class="meta">
+    <p>Author: {frontmatter.author}</p>
+    <p>Published: {new Date(frontmatter.published_at).toDateString()}</p>
+  </div>
+  <slot />
+</Body>
