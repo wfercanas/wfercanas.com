@@ -1,0 +1,44 @@
+---
+const { url, title, description, published_at } = Astro.props
+---
+
+<style>
+  li {
+    margin: 32px 0;
+  }
+  
+  a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  a:hover .title {
+    text-decoration: underline;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .title, .published_at, .description {
+    margin: 0;
+  }
+
+  .published_at {
+    font-size: 14px;
+  }
+</style>
+
+<li>
+  <a href={url}>
+    <div>
+      <h2 class="title">{title}</h2>
+      <p class="published_at">{new Date(published_at).toLocaleDateString()}</p>
+    </div>
+    <p class="description">{description}</p>
+  </a>
+</li>
