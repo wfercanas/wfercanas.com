@@ -1,0 +1,19 @@
+:root {
+  --black: #16325b;
+  --gray: #818fb4;
+}
+
+html {
+  font-family: "PT Serif", serif;
+}
+
+* {
+  color: var(--black);
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+}
