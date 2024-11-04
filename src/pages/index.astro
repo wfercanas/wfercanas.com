@@ -1,16 +1,29 @@
 ---
+import Body from '../layouts/Body.astro'
 
+import '../styles/global.css'
+import ArticleCard from '../components/ArticleCard.astro'
+
+const allPosts = await Astro.glob("./posts/*.md")
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<style>
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+</style>
+
+<Body title="Home" headline="Articles">
+	<ul>
+    {allPosts.map(post => 
+			<ArticleCard 
+				url={post.url} 
+				title={post.frontmatter.title} 
+				description={post.frontmatter.description} 
+				published_at={post.frontmatter.published_at}
+			/> 
+		)}
+  </ul>
+</Body>
