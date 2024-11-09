@@ -14,10 +14,12 @@ const { frontmatter } = Astro.props;
 </style>
 
 
-<Body title="article" headline={frontmatter.title}>
+<Body title={frontmatter.title} headline={frontmatter.title}>
   <div class="meta">
     <p>Author: {frontmatter.author}</p>
     <p>Published: {new Date(frontmatter.published_at).toDateString()}</p>
   </div>
-  <slot />
+  <div class="content">
+    <slot />
+  </div>
 </Body>

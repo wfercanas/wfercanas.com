@@ -24,6 +24,6 @@ const allPosts = await Astro.glob("./posts/*.md")
 				description={post.frontmatter.description} 
 				published_at={post.frontmatter.published_at}
 			/> 
-		)}
+		).reverse()}
   </ul>
 </Body>
