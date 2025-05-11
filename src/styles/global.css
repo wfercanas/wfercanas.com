@@ -21,3 +21,7 @@ body {
 .content p {
   line-height: 2;
 }
+
+.content ol li {
+  line-height: 2;
+}
